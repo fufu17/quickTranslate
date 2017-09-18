@@ -1,12 +1,29 @@
 <!doctype html>
 <html>
+<style>
+body{
+  min-width: 200px;
+  min-height: 80px;
+}
+</style>
   <head>
     <title>Quick Translate</title>
     <script src="popup.js"></script>
   </head>
   <body>
-    <h1>This will revolutionize the way that you 
-      think about translating webpages</h1>
+    <center>
+    <form>
+        Choose which language you want to translate to
+        <br>
+        <select id="languages" onchange="translate()">
+        <option value="Chinese">Chinese</option>
+        <option value="English">English</option>
+        <option value="Japanese">Japanese</option>
+        </select>
+    </form>
+    <br>
+    <br>
     <button id="translate">Begin Translating</button>
+  </center>
   </body>
 </html>
