@@ -15,16 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // not working yet 
-  chrome.extension.onMessage.addListener((message) => {
-    console.log('in popup');
-    console.log('text recevied from listener is', message);
-    return true;
-  });
-
-
-});
-
 //doing the translation
 var language;
 function translate(){

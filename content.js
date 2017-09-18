@@ -4,7 +4,7 @@ document.addEventListener('mouseup', () => {
   var textToTranslate = getSelectedText();
   if (textToTranslate != '') {
     console.log(textToTranslate);
-    chrome.extension.sendMessage(textToTranslate, () => {
+    chrome.runtime.sendMessage(textToTranslate, () => {
        //callback
        console.log('text sent to extension', textToTranslate);
     });
