@@ -4,7 +4,6 @@ button = document.getElementById('translate');
 var translateIsOn = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-
   // toggles whether auto translate is on
   button.addEventListener('click', () => {
     if (translateIsOn) {
@@ -26,3 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+//doing the translation
+var language;
+function translate(){
+  language = document.forms[0].browsers.value;
+}
