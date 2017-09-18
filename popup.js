@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   // automatically translate all highlighted text if on
   var translateIsOn = false;
   var button = document.getElementById('translate');
@@ -23,3 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+//doing the translation
+var language;
+function translate(){
+  language = document.forms[0].browsers.value;
+}
