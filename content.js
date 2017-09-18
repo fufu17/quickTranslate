@@ -2,7 +2,7 @@ document.addEventListener('mouseup', () => {
   //grab text
   console.log('mouseup detected');
   var textToTranslate = getSelectedText();
-  if (textToTranslate != '') {
+  if (textToTranslate != '' && textToTranslate!=null) {
     console.log(textToTranslate);
     chrome.runtime.sendMessage(textToTranslate, () => {
        //callback
