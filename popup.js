@@ -1,9 +1,9 @@
-button = document.getElementById('translate');
-
-// automatically translate all highlighted text if on
-var translateIsOn = false;
-
 document.addEventListener('DOMContentLoaded', () => {
+
+  // automatically translate all highlighted text if on
+  var translateIsOn = false;
+  var button = document.getElementById('translate');
+
   // toggles whether auto translate is on
   button.addEventListener('click', () => {
     if (translateIsOn) {
@@ -15,13 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // grab text to translate
-  document.addEventListener('mouseup', () => {
-    if (translateIsOn && window.getSelection().toString() != "") {
-      textToTranslate = window.getSelection().toString()
-      console.log(textToTranslate);
-    }
-  })
+  // not working yet 
+  chrome.extension.onMessage.addListener((message) => {
+    console.log('in popup');
+    console.log('text recevied from listener is', message);
+    return true;
+  });
 
 
 });
